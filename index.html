@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RASP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- <img src="files\teaser.png" alt="RASP" class="teaserImage" id="teaserImage">
+    <div id="placeHolder"></div> -->
+
+    <header class="header area">
+
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <h1><span style="font-size: 65px;">RASP</span>: Revisiting 3D Anamorphic Art for <br>Shadow-Guided 
+            Packing of Irregular Objects</h1>
+        <h3 style="margin-top: 20px;">Soumyaratna Debnath, Ashish Tiwari, Kaustubh Sadekar, Shanmuganathan Raman</h3>
+        <h3 style="margin-top: 20px;"><a href="https://cvpr.thecvf.com" class="sigAnchor">CVPR 2025</a></h3>
+    </header>
+
+    
+
+    <main class="content">
+        <div style="justify-content: center; display: flex; margin-bottom: 20px;">
+            <a class="btn btn-dark" href="index.html"><img src="files/description.svg"/> Paper (Coming Soon)</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-dark" href="index.html"><img src="files/database.svg"/> Code (Coming Soon)</a>
+        </div>
+        <section>
+            <h2>Abstract</h2>
+            <p class="abstract">
+                Recent advancements in learning-based methods have opened new avenues for exploring and interpreting various artistic forms, such as shadow art, origami, and sketch art, through computational models. One notable visual art form is 3D Anamorphic Art, in which a specific ensemble of arbitrarily shaped 3D objects creates a realistic and meaningful expression when observed from a particular viewpoint and loses its coherence over the other viewpoints. In this work, we build on insights from 3D Anamorphic Art to address the task of 3D object arrangement. We introduce RASP - a differentiable-rendering-based framework to arrange arbitrarily shaped 3D objects within a bounded volume (or container) via shadow-guided optimization aiming towards minimal inter-object spacing and near-maximal occupancy. Here, the projected silhouette of the 3D object arrangement serves as its shadow. Furthermore, we propose a novel SDF-based formulation to handle inter-object intersection and container extrusion. Since the 3D objects can also be ``parts" of another 3D object, we demonstrate how RASP can be extended to part assembly alongside object packing. Finally, we present artistic illustrations of multi-view anamorphic art, achieving meaningful expressions from multiple viewpoints within a single ensemble.
+            </p>
+        </section>
+
+        <section>
+            <h2>Results : Packing with IR-BPP Dataset</h2>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-3">
+                    <img src="files\abc.gif" alt="Internal Error" style="width: 100%;">
+                </div>
+                <div class="col-md-3">
+                    <img src="files\blk.gif" alt="Internal Error" style="width: 100%;">
+                </div>
+                <div class="col-md-3">
+                    <img src="files\gen.gif" alt="Internal Error" style="width: 100%;">
+                </div>
+                <div class="col-md-3">
+                    <img src="files\kit.gif" alt="Internal Error" style="width: 100%;">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Results : Packing into Arbitrary Shaped Containers</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="files\1.gif" alt="Internal Error" style="width: 100%;">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="files\2.gif" alt="Internal Error" style="width: 100%;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="files\4.gif" alt="Internal Error" style="width: 100%;">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="files\3.gif" alt="Internal Error" style="width: 100%;">
+                    </div>
+                </div>
+        </section>
+
+        <section>
+            <h2>Results : 3D Parts Reassembly with Fantastic Breaks Dataset</h2>
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-md-6">
+                        <img src="files\5.gif" alt="Internal Error" style="width: 100%;">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="files\6.gif" alt="Internal Error" style="width: 100%;">
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-md-6">
+                        <img src="files\7.gif" alt="Internal Error" style="width: 100%;">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="files\8.gif" alt="Internal Error" style="width: 100%;">
+                    </div>
+                </div>
+        </section>
+
+        <section>
+            <h2>Results : 3D Anamorphic Art</h2>
+                <img src="files\9.gif" alt="Internal Error" style="width: 100%;">
+                <hr>
+                <img src="files\10.gif" alt="Internal Error" style="width: 100%;">
+                <hr>
+                <img src="files\11.gif" alt="Internal Error" style="width: 100%;">
+                <hr>
+                <img src="files\12.gif" alt="Internal Error" style="width: 100%;">
+        </section>
+
+        <section>
+            <h2>Visualisation of the optimization Process</h2>
+                <img src="files\13.gif" alt="Internal Error" style="width: 100%;">
+                <img src="files\14.gif" alt="Internal Error" style="width: 100%;">
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        &copy; 2025 Soumyaratna Debnath, CVIG Lab, Indian Institute of Technology Gandhinagar
+    </footer>
+
+</body>
+</html>

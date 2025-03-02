@@ -118,25 +118,29 @@
 
         <section>
             <h2>Results : 3D Anamorphic Art</h2>
-                <img src="files\gif_sd\9.gif" alt="Internal Error" style="width: 100%;">
-                <hr>
-                <img src="files\gif_sd\10.gif" alt="Internal Error" style="width: 100%;">
-                <hr>
-                <img src="files\gif_sd\11.gif" alt="Internal Error" style="width: 100%;">
-                <hr>
-                <img src="files\gif_sd\12.gif" alt="Internal Error" style="width: 100%;">
+            <!-- Navigation tabs -->
+            <div class="row" style="margin-top: 20px;">
+                <!-- Notice the data-image now matches the image IDs -->
+                <div class="tabAno activeAno" data-image="AnoImg1">Example 1</div>
+                <div class="tabAno" data-image="AnoImg2">Example 2</div>
+                <div class="tabAno" data-image="AnoImg3">Example 3</div>
+                <div class="tabAno" data-image="AnoImg4">Example 4</div>
+            </div>
+            <!-- Image elements -->
+            <img id="AnoImg1" class="imgAno" src="files/gif_sd/9.gif" alt="Internal Error">
+            <img id="AnoImg2" class="hiddenAno imgAno" src="files/gif_sd/10.gif" alt="Internal Error">
+            <img id="AnoImg3" class="hiddenAno imgAno" src="files/gif_sd/11.gif" alt="Internal Error">
+            <img id="AnoImg4" class="hiddenAno imgAno" src="files/gif_sd/12.gif" alt="Internal Error">
         </section>
 
         <section>
             <h2>Visualizing of the Optimization Process</h2>
-            <div class="row" style="margin-top: 40px;">
-                <div class="col-md-6" style="margin-top: 20px;">
-                    <img src="files\gif_sd\13.gif" alt="Internal Error" style="width: 100%;">
-                </div>
-                <div class="col-md-6">
-                    <img src="files\gif_sd\14.gif" alt="Internal Error" style="width: 100%;">
-                </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="tabOpti activeOpti" data-image="OptiImg1">Example 1</div>
+                <div class="tabOpti" data-image="OptiImg2">Example 2</div>
             </div>
+            <img id="OptiImg1" class="imgOpti" src="files/gif_sd/13.gif" alt="Internal Error" style="margin-top: 20px;">
+            <img id="OptiImg2" class="hiddenOpti imgOpti" src="files/gif_sd/14.gif" alt="Internal Error">
         </section>
 
     </main>
@@ -145,5 +149,39 @@
         &copy; 2025 Soumyaratna Debnath, CVIG Lab, Indian Institute of Technology Gandhinagar
     </footer>
 
+    <script>
+        // 3D Anamorphic Art Navigation
+        const tabsAno = document.querySelectorAll('.tabAno');
+        const imagesAno = document.querySelectorAll('.imgAno');
+      
+        tabsAno.forEach(tab => {
+          tab.addEventListener('click', () => {
+            tabsAno.forEach(t => t.classList.remove('activeAno'));
+            imagesAno.forEach(img => img.classList.add('hiddenAno'));
+      
+            tab.classList.add('activeAno');
+      
+            const imageId = tab.getAttribute('data-image');
+            document.getElementById(imageId).classList.remove('hiddenAno');
+          });
+        });
+        
+
+        // Optimization Process Navigation
+        const tabsOpti = document.querySelectorAll('.tabOpti');
+        const imagesOpti = document.querySelectorAll('.imgOpti');
+      
+        tabsOpti.forEach(tab => {
+          tab.addEventListener('click', () => {
+            tabsOpti.forEach(t => t.classList.remove('activeOpti'));
+            imagesOpti.forEach(img => img.classList.add('hiddenOpti'));
+      
+            tab.classList.add('activeOpti');
+      
+            const imageId = tab.getAttribute('data-image');
+            document.getElementById(imageId).classList.remove('hiddenOpti');
+          });
+        });
+    </script>
 </body>
 </html>

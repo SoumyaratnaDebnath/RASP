@@ -16,17 +16,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
 
-    <!-- <img src="files\teaser.png" alt="RASP" class="teaserImage" id="teaserImage">
-    <div id="placeHolder"></div> -->
-
     <header class="header area">
-
-        <ul class="circles">
+        <ul class="bubbles">
             <li></li>
             <li></li>
             <li></li>
@@ -38,20 +33,29 @@
             <li></li>
             <li></li>
         </ul>
-
         <h1><span style="font-size: 65px;">RASP</span>: Revisiting 3D Anamorphic Art for <br>Shadow-Guided 
             Packing of Irregular Objects</h1>
-        <h3 style="margin-top: 20px;">Soumyaratna Debnath, Ashish Tiwari, Kaustubh Sadekar, Shanmuganathan Raman</h3>
+        <h3 style="margin-top: 20px;">Soumyaratna Debnath*, Ashish Tiwari*, Kaustubh Sadekar, Shanmuganathan Raman</h3>
         <h3 style="margin-top: 20px;"><a href="https://cvpr.thecvf.com" class="sigAnchor">CVPR 2025</a></h3>
     </header>
 
-    
-
     <main class="content">
+        
         <div style="display: flex; justify-content: center; margin-bottom: 20px;">
             <a class="btn btn-dark" href="index.html"><img src="files/description.svg"/> Paper (Coming Soon)</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a class="btn btn-dark" href="index.html"><img src="files/database.svg"/> Code (Coming Soon)</a>
         </div>
+        
+        <section>
+            <h2>Visualizing of the Optimization Process</h2>
+            <div class="row" style="margin-top: 20px;">
+                <div class="tabOpti activeOpti" data-image="OptiImg1">Example 1</div>
+                <div class="tabOpti" data-image="OptiImg2">Example 2</div>
+            </div>
+            <img id="OptiImg1" class="imgOpti" src="files/gif_sd/13.gif" alt="Internal Error" style="margin-top: 20px;">
+            <img id="OptiImg2" class="hiddenOpti imgOpti" src="files/gif_sd/14.gif" alt="Internal Error">
+        </section>
+
         <section>
             <h2>Abstract</h2>
             <p class="abstract">
@@ -134,16 +138,6 @@
             <img id="AnoImg4" class="hiddenAno imgAno" src="files/gif_sd/12.gif" alt="Internal Error">
         </section>
 
-        <section>
-            <h2>Visualizing of the Optimization Process</h2>
-            <div class="row" style="margin-top: 20px;">
-                <div class="tabOpti activeOpti" data-image="OptiImg1">Example 1</div>
-                <div class="tabOpti" data-image="OptiImg2">Example 2</div>
-            </div>
-            <img id="OptiImg1" class="imgOpti" src="files/gif_sd/13.gif" alt="Internal Error" style="margin-top: 20px;">
-            <img id="OptiImg2" class="hiddenOpti imgOpti" src="files/gif_sd/14.gif" alt="Internal Error">
-        </section>
-
     </main>
 
     <footer class="footer">
@@ -166,7 +160,6 @@
             document.getElementById(imageId).classList.remove('hiddenAno');
           });
         });
-        
 
         // Optimization Process Navigation
         const tabsOpti = document.querySelectorAll('.tabOpti');

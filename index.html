@@ -32,12 +32,28 @@
             <li></li>
             <li></li>
             <li></li>
+            
+            <h1><span style="font-size: 65px;">RASP</span>: Revisiting 3D Anamorphic Art for <br>Shadow-Guided Packing of Irregular Objects</h1>
+            <h3 style="margin-top: 20px; z-index: 999;">
+                <a href="https://soumyaratnadebnath.github.io" style="text-decoration: none; color: white;">Soumyaratna Debnath<sup>1</sup>*</a>, 
+                <a href="https://sites.google.com/iitgn.ac.in/ashishtiwari" style="text-decoration: none; color: white;">Ashish Tiwari<sup>1</sup>*</a>, 
+                <a href="https://kaustubh-sadekar.github.io" style="text-decoration: none; color: white;">Kaustubh Sadekar<sup>2</sup></a>, 
+                <a href="https://shanmuga.people.iitgn.ac.in" style="text-decoration: none; color: white;">Shanmuganathan Raman<sup>1</sup></a>
+            </h3>
+            <h5 style="margin-top: 20px;"><sup>1 </sup>Indian Institute Of Technology Gandhinagar &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2 </sup>Portland State University</h5>
+            <h3 style="margin-top: 20px;"><a href="https://cvpr.thecvf.com" class="sigAnchor">CVPR 2025</a></h3>
+        
         </ul>
-        <h1><span style="font-size: 65px;">RASP</span>: Revisiting 3D Anamorphic Art for <br>Shadow-Guided 
-            Packing of Irregular Objects</h1>
-        <h3 style="margin-top: 20px;">Soumyaratna Debnath<sup>1</sup>*, Ashish Tiwari<sup>1</sup>*, Kaustubh Sadekar<sup>2</sup>, Shanmuganathan Raman<sup>1</sup></h3>
-        <h3 style="margin-top: 20px;"><a href="https://cvpr.thecvf.com" class="sigAnchor">CVPR 2025</a></h3>
-        <h5 style="margin-top: 20px;"><sup>1 </sup>Indian Institute Of Technology Gandhinagar, India &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2 </sup>Portland State University, United States</h5>
+
+        <div style="opacity: 0;"> <!-- This is a hack to make the text visible AND maintain the size of the blue panel -->
+            <h1><span style="font-size: 65px;">RASP</span>: Revisiting 3D Anamorphic Art for <br>Shadow-Guided Packing of Irregular Objects</h1>
+            <h3 style="margin-top: 20px; z-index: 999;">
+                Soumyaratna Debnath<sup>1</sup>*, Ashish Tiwari<sup>1</sup>*, Kaustubh Sadekar<sup>2</sup>, Shanmuganathan Raman<sup>1</sup>
+            </h3>
+            <h5 style="margin-top: 20px;"><sup>1 </sup>Indian Institute Of Technology Gandhinagar &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2 </sup>Portland State University</h5>
+            <h3 style="margin-top: 20px;"><a href="https://cvpr.thecvf.com" class="sigAnchor">CVPR 2025</a></h3>
+        </div>
+
     </header>
 
     <main class="content">
@@ -60,7 +76,7 @@
         <section>
             <h2>Abstract</h2>
             <p class="abstract">
-                Recent advancements in learning-based methods have opened new avenues for exploring and interpreting various artistic forms, such as shadow art, origami, and sketch art, through computational models. One notable visual art form is 3D Anamorphic Art, in which a specific ensemble of arbitrarily shaped 3D objects creates a realistic and meaningful expression when observed from a particular viewpoint and loses its coherence over the other viewpoints. In this work, we build on insights from 3D Anamorphic Art to address the task of 3D object arrangement. We introduce RASP - a differentiable-rendering-based framework to arrange arbitrarily shaped 3D objects within a bounded volume (or container) via shadow-guided optimization aiming towards minimal inter-object spacing and near-maximal occupancy. Here, the projected silhouette of the 3D object arrangement serves as its shadow. Furthermore, we propose a novel SDF-based formulation to handle inter-object intersection and container extrusion. Since the 3D objects can also be ``parts" of another 3D object, we demonstrate how RASP can be extended to part assembly alongside object packing. Finally, we present artistic illustrations of multi-view anamorphic art, achieving meaningful expressions from multiple viewpoints within a single ensemble.
+                Recent advancements in learning-based methods have opened new avenues for exploring and interpreting art forms, such as shadow art, origami, and sketch art, through computational models. One notable visual art form is 3D Anamorphic Art in which an ensemble of arbitrarily shaped 3D objects creates a realistic and meaningful expression when observed from a particular viewpoint and loses its coherence over the other viewpoints. In this work, we build on insights from 3D Anamorphic Art to perform 3D object arrangement. We introduce RASP, a differentiable-rendering-based framework to arrange arbitrarily shaped 3D objects within a bounded volume via shadow (or silhouette)-guided optimization with an aim of minimal inter-object spacing and near-maximal occupancy. Furthermore, we propose a novel SDF-based formulation to handle inter-object intersection and container extrusion. We demonstrate that RASP can be extended to part assembly alongside object packing considering 3D objects to be "parts" of another 3D object. Finally, we present artistic illustrations of multi-view anamorphic art, achieving meaningful expressions from multiple viewpoints within a single ensemble.
             </p>
         </section>
 

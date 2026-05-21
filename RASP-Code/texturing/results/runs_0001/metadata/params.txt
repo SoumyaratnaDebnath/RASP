@@ -1,0 +1,28 @@
+# environment parameters
+ENVIRONMENT_SIZE = 60000  # Set the overall environment size to 60000
+
+# camera parameters
+CAMERA_TRANSFORMS = [[None, 0.0, 0.0], [None, 0.0, 90.0], [None, 0.0, 180.0], [None, 0.0, 270.0],]  # Define camera transforms as [distance, azimuth, elevation] for each camera
+CAMERA_TYPES = ['orthographic',]*len(CAMERA_TRANSFORMS)  # Set camera type to 'orthographic' for each camera transform
+FACES_PER_PIXEL = 100  # Set the number of faces per pixel for rasterization
+IMAGE_SIZE = 800  # Set the image resolution to 800x800 pixels
+
+# object parameters
+TARGET_IMAGES = ['data/cartoon1.jpg', 'data/cartoon2.jpg', 'data/cartoon1f.jpg', 'data/cartoon2f.jpg']  # List target image file paths for silhouette matching
+SOURCE_OBJECTS = ['data/arrangement_runs_0001/report/structures/final.obj']  # List source object file paths (here a single .obj file)
+SOURCE_SCALES = [1]  # Set scaling factors for the source objects (here 1 for each)
+RANDOM_INITIAL_TRANSFORMATIONS = False  # Disable random initial transformations for source objects
+
+# training parameters
+NUM_EPOCHS = 200  # Set the number of training epochs to 200
+WEIGHT_SILHOUETTE = 10.0  # Set the weight for the silhouette loss to 10.0
+LEARNING_RATE = 1e-2  # Set the learning rate for the optimizer to 0.005
+
+# visualization parameters
+PLOT_PERIOD = NUM_EPOCHS // 100  # Define the plotting period (every NUM_EPOCHS/100 epochs)
+PROGRESSIVE_RESULTS = True  # Enable progressive visualization of training results
+VISUALIZE = False  # Disable detailed visualization during training
+
+# derived hyperparameters
+CAMERA_COUNT = len(CAMERA_TRANSFORMS)  # Calculate the number of cameras from the length of CAMERA_TRANSFORMS
+NUM_OBJECTS = len(SOURCE_OBJECTS)  # Calculate the number of source objects from the length of SOURCE_OBJECTS

@@ -1,0 +1,1 @@
+python3 visualizeArrangement.py --folder results/runs_0001/report/structures/individual/
